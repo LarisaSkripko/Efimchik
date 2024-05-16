@@ -1,0 +1,179 @@
+.preview {
+    overflow: hidden;
+    position: relative;
+    margin-top: 160px;
+    &--ltr {
+        flex-direction: row;
+    }
+    &__intro {
+        flex: 0 0 58.3333333333%;
+        max-width: 58.3333333333%;
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    &__content {
+        text-transform: uppercase;
+        text-align: left;
+    }
+    &__title {
+        font-size: 2.8em;
+        line-height: 1;
+        font-family: 'Hero-Bold',sans-serif;
+        margin-bottom: 15px;
+    }
+    &__subtitle {
+        font-size: 1.3em;
+        line-height: 1.4;
+    }
+    &__purchase {
+        color: #D63131;
+        font-size: 2em;
+        font-family: 'Hero-Bold',sans-serif;
+    }
+    &__block {
+        z-index: 1;
+        max-width: 655px;
+        margin-top: 55px;
+        font-size: 0.9em;
+        font-weight: 300;
+        line-height: 1.5;
+        text-align: center;
+        padding: 35px 25px;
+        position: relative;
+        background-color: #fff;
+        border: 6px solid #E9E9E9;
+        text-transform: uppercase;
+        font-family: 'Comfortaa', 'Hero', sans-serif;
+        &::before {
+            content: '';
+            width: 41px;
+            height: 36px;
+            position: absolute;
+            top: 15px;
+            left: -15px;
+            background: url("../img/decor/quote.svg") center / contain no-repeat;
+        }
+        &::after {
+            content: '';
+            width: 41px;
+            height: 36px;
+            position: absolute;
+            bottom: 15px;
+            right: -15px;
+            transform: scale(-1);
+            background: url("../img/decor/quote.svg") center / contain no-repeat;
+        }
+    }
+    &__picture {
+        display: flex;
+        height: 725px;
+        position: relative;
+        align-items: flex-end;
+        justify-content: center;
+        flex: 0 0 41.6666666667%;
+        max-width: 41.6666666667%;
+        &::before {
+            content: '';
+            width: 850px;
+            height: 500px;
+            position: absolute;
+            background-image: url("../img/decor/polygon-10.svg");
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: left bottom;
+            left: 0;
+        }
+        img {
+            height: 100%;
+            display: flex;
+            flex-shrink: 0;
+            align-items: end;
+            position: relative;
+        }
+    }
+    &__info {
+        left: 0;
+        border-top-right-radius: 10px;
+        bottom: 0;
+        color: #fff;
+        display: flex;
+        cursor: pointer;
+        line-height: 0.9;
+        font-size: 1.25em;
+        position: absolute;
+        padding: 35px 35px;
+        text-align: center;
+        position: absolute;
+        align-items: center;
+        flex-direction: column;
+        text-transform: uppercase;
+        background-color: #D63131;
+        justify-content: space-between;
+    }
+    &__call {
+        font-family: 'Hero-Bold';
+    }
+    &__tel {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 1299px) {
+    .preview {
+        &__picture {
+            height: 645px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .preview {
+        &__picture {
+            height: 545px;
+            max-width: 246px;
+        }
+        &__intro {
+            flex: 0 0 66.6666666667%;
+            max-width: 66.6666666667%;
+        }
+        &__block {
+            margin-top: 10px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .preview {
+        &__picture {
+            margin-top: 35px;
+            &::before {
+                background-image: none;
+            }
+        }
+        &__block {
+            display: none;
+        }
+        &__intro {
+            max-width: 546px;
+        }
+        &__content {
+            text-align: center;
+            max-width: 546px;
+        }
+        &__info {
+            border-top-left-radius: 10px;
+            width: 420px;
+            left: calc((100% - 420px) / 2);
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .preview {
+        &__picture {
+            margin-top: 15px;
+        }
+    }
+}
